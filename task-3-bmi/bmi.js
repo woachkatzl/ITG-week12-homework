@@ -33,6 +33,9 @@ let userWeight = 0;
 let userHeight = 0;
 
 //EVENT LISTENERS
+// Пришлось добавить эти слушатели событий и функцию, так как не получалось извлечь данные из полей ввода с помощью кода:
+// let userWeight = weightInput.value;
+// консоль фиксировала пустую строку даже после ввода данных в поле.
 weightInput.addEventListener("change", getValue);
 heightInput.addEventListener("change", getValue);
 
