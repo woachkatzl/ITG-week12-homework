@@ -15,7 +15,6 @@ function getValue(event) {
     } else if (eventTarget.getAttribute("id") === "height-input") {
         userHeight = eventTarget.value / 100;
     }
-    console.log(calculateBMI(userWeight, userHeight));
 }
 
 //Function to get the result of calculation on the page
