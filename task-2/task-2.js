@@ -9,7 +9,7 @@ console.log(text.length);
 const result = text.replace(/;/g, "$&\n");
 
 // 3. Удалите все пробелы в переменной result и сохраните результат в переменную substring.
-const substring = result.replace(/ /g, "");
+const substring = result.replace(/\s/g, "");
 
 // 4. Извлеките подстроку из переменной result, начиная с 28-го символа и до 50-го символа (не включая), из текста и сохраните в переменную newText.
 const newText = result.slice(27, 50);
