@@ -2,8 +2,8 @@
 
 // Функция для рассчета ИМТ
 function calculateBMI(weight, height) {
-    let heightSquared = Math.pow(height, 2);
-    let calcBmi = weight / heightSquared;
+    const heightSquared = Math.pow(height, 2);
+    const calcBmi = weight / heightSquared;
     return calcBmi.toFixed(2);
 }
 
@@ -19,7 +19,7 @@ function getValue(event) {
 
 //Function to get the result of calculation on the page
 function showResult() {
-    let result = calculateBMI(userWeight, userHeight);
+    const result = calculateBMI(userWeight, userHeight);
     message.textContent = "Индекс массы тела (ИМТ): " + result;
 }
 
