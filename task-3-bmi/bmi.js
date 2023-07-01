@@ -2,7 +2,8 @@
 
 // Функция для рассчета ИМТ
 function calculateBMI(weight, height) {
-    const heightSquared = Math.pow(height, 2);
+    const heightInMeters = height / 100;
+    const heightSquared = Math.pow(heightInMeters, 2);
     const calcBmi = weight / heightSquared;
     return calcBmi.toFixed(2);
 }
@@ -10,10 +11,11 @@ function calculateBMI(weight, height) {
 //Function to get values of weight and height
 function getValue(event) {
     const eventTarget = event.target;
+
     if (eventTarget.getAttribute("id") === "weight-input") {
         userWeight = eventTarget.value;
     } else if (eventTarget.getAttribute("id") === "height-input") {
-        userHeight = eventTarget.value / 100;
+        userHeight = eventTarget.value;
     }
 }
 
