@@ -12,7 +12,9 @@ function calculateBMI(weight, height) {
 function getValue(event) {
     const eventTarget = event.target;
 
-    if (eventTarget.getAttribute("id") === "weight-input") {
+    if (Number.isNaN(eventTarget.value)) {
+        alert("Ошибка! Ведите числовое значение.");
+    } else if (eventTarget.getAttribute("id") === "weight-input") {
         userWeight = eventTarget.value;
     } else if (eventTarget.getAttribute("id") === "height-input") {
         userHeight = eventTarget.value;
